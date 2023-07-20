@@ -18,4 +18,3 @@
                     :as "caretakers"))
     :resource-base (s-url "http://mu.semte.ch/application/zoo-foodmanager/animals/")
 :on-path "animals")
-
