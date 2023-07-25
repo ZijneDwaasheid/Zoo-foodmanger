@@ -1,0 +1,15 @@
+<h1>All Caretakers</h1>
+
+<ul>
+  {{#each this.model as |caretaker|}}
+    <li>
+      {{caretaker.name}}
+      <ul>
+        {{#each caretaker.animals as |animal|}}
+          <li>{{animal.species}} - {{animal.diet}}</li>
+        {{/each}}
+      </ul>
+    </li>
+  {{/each}}
+</ul>
+
