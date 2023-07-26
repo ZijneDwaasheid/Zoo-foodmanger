@@ -1,0 +1,13 @@
+<form {{on 'submit' this.addAnimal}}>
+  <label>
+    Species:
+    {{input value=this.species}}
+  </label>
+
+  <label>
+    Diet:
+    {{input value=this.diet}}
+  </label>
+
+  <button type="submit">Add Animal</button>
+</form>

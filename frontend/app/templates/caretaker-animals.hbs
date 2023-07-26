@@ -1,0 +1,8 @@
+<h1>Animals for {{this.model.name}}</h1>
+
+<ul>
+  {{#each this.model.animals as |animal|}}
+    <li>{{animal.species}} - {{animal.diet}}</li>
+  {{/each}}
+</ul>
+

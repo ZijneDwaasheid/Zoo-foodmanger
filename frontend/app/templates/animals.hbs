@@ -1,0 +1,17 @@
+{{page-title "Animals"}}
+
+
+{{#if this.model}}
+  <ul>
+    {{#each this.model as |animal|}}
+      <li>
+        <strong>Species:</strong> {{animal.species}}<br>
+        <strong>Diet:</strong> {{animal.diet}}<br>
+      </li>
+    {{/each}}
+  </ul>
+{{else}}
+  <p>No animals found.</p>
+{{/if}}
+
+<AddAnimal />
