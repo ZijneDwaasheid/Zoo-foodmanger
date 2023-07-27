@@ -1,5 +1,16 @@
-{{page-title "Zoo-foodmanager"}}
+<div class="container">
+  <div class="menu">
+    <div class="logo">
+      <h1>Zoo-foodmanager</h1>
+    </div>
+    <div class="links">
+      <LinkTo @route="index">Home</LinkTo>
+      <LinkTo @route="caretakers">Caretakers</LinkTo>
+      <LinkTo @route="animals">Animals</LinkTo>
+    </div>
+  </div>
 
-<h2>test</h2>
-
-{{outlet}}
+  <div class="body">
+    {{outlet}}
+  </div>
+</div>
