@@ -6,7 +6,7 @@ export default class CaretakerAnimalsRoute extends Route {
 
   async model(params) {
     return this.store.findRecord('caretaker', params.caretaker_id, {
-      inclde: 'animals',
+      include: 'animals',
     });
   }
 }

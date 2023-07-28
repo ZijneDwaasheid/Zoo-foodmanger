@@ -5,6 +5,6 @@ export default class CaretakersRoute extends Route {
   @service store;
 
   async model() {
-    return this.store.findAll('caretaker', { include: 'animals' });
+    return this.store.findAll('caretaker');
   }
 }

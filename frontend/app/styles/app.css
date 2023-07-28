@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300,300italic,400,700,700italic);
+@import url("https://fonts.googleapis.com/css?family=Lato:300,300italic,400,700,700italic");
 
 /**
  * Base Elements
@@ -21,7 +21,8 @@ div,
 span,
 a,
 button {
-  font-family: 'Lato', 'Open Sans', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-family: Lato, "Open Sans", "Helvetica Neue", "Segoe UI", Helvetica,
+    Arial, sans-serif;
   line-height: 1.5;
 }
 
@@ -48,7 +49,7 @@ p {
  */
 
 .button {
-  padding: 10px 30px 10px;
+  padding: 10px 30px;
   text-decoration: none;
   color: #fff;
   background: #016aba;
@@ -63,6 +64,7 @@ p {
 .button:hover {
   opacity: 1;
 }
+
 /**
  * Body Container
  */
@@ -73,6 +75,7 @@ p {
   background: #f9f9f9;
   margin: 0 auto;
 }
+
 /**
  * Top Navigation
  */
@@ -82,8 +85,6 @@ p {
   justify-content: space-between;
   align-items: center;
   height: 4em;
-  background-color: #677ae4;
-  background-color: #05526A;
   background-color: #e46855;
 }
 
@@ -153,7 +154,7 @@ p {
   font-size: 18px;
   width: 500px;
   margin: 20px auto 50px;
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgb(255 255 255 / 75%);
   border: solid 1px lightgray;
   display: block;
 }
@@ -187,8 +188,8 @@ p {
   top: 54px;
   left: 10px;
   background-color: #f6f6f6;
-  border-right: 1px solid rgba(0, 0, 0, 0.05);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-right: 1px solid rgb(0 0 0 / 5%);
+  border-bottom: 1px solid rgb(0 0 0 / 5%);
 }
 
 .results {
@@ -203,6 +204,7 @@ p {
 .menu .results li:hover {
   background: #f3f3f3;
 }
+
 /**
  * Content Area
  */
@@ -210,6 +212,7 @@ p {
 .body {
   padding: 15px;
 }
+
 /**
  * Similar to Jumbotron
  */
@@ -281,7 +284,7 @@ p {
   outline: none;
 }
 
-.rental button.image:after {
+.rental button.image::after {
   content: "";
   position: absolute;
   top: 0;
@@ -297,7 +300,8 @@ p {
   transition: opacity 0.25s ease-in-out;
 }
 
-.rental button.image:focus:after, .rental button.image:hover:after {
+.rental button.image:focus::after,
+.rental button.image:hover::after {
   opacity: 0.1;
 }
 
@@ -306,7 +310,7 @@ p {
 }
 
 .rental .image.large {
-  margin: 30px 25px 50px 25px;
+  margin: 30px 25px 50px;
   flex-basis: 100%;
 }
 
@@ -323,7 +327,7 @@ p {
 
 .rental .image.large small {
   margin-top: 10px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   font-size: 110%;
 }
 
@@ -362,7 +366,7 @@ p {
   flex-grow: 0;
   flex-basis: 150px;
   font-size: 0;
-  margin: 0px 25px;
+  margin: 0 25px;
 }
 
 .rental .map img {
@@ -380,7 +384,7 @@ p {
 }
 
 .rental.detailed .image.large {
-  margin: 30px 25px 50px 25px;
+  margin: 30px 25px 50px;
   flex-basis: 100%;
 }
 
@@ -394,7 +398,7 @@ p {
 }
 
 .rental.detailed .detail {
-  margin: 5px 0px;
+  margin: 5px 0;
   flex-basis: 100%;
   flex-shrink: 2;
 }
@@ -407,7 +411,7 @@ p {
 
 .rental.detailed .map {
   flex-basis: 100%;
-  margin: 50px 25px 25px 25px;
+  margin: 50px 25px 25px;
 }
 
 .rental.detailed .map img {
@@ -415,9 +419,10 @@ p {
   height: auto;
 }
 
-@media only screen and (max-width: 919px) {
-  .rental.detailed .image, .rental.detailed .image.large {
-    margin: 30px 25px 25px 25px;
+@media only screen and (width <= 919px) {
+  .rental.detailed .image,
+  .rental.detailed .image.large {
+    margin: 30px 25px 25px;
     flex-basis: 100%;
     cursor: default;
   }
@@ -431,11 +436,11 @@ p {
     display: none;
   }
 
-  .rental.detailed button.image:hover:after {
+  .rental.detailed button.image:hover::after {
     opacity: 0;
   }
 
-  .rental.detailed button.image:focus:after {
+  .rental.detailed button.image:focus::after {
     opacity: 0.1;
   }
 
@@ -469,20 +474,22 @@ p {
 }
 
 .tomster {
-  background: url(../assets/images/teaching-tomster.png);
+  background: url("../assets/images/teaching-tomster.png");
   background-size: contain;
   background-repeat: no-repeat;
   height: 200px;
   width: 200px;
-
   position: relative;
   top: -25px;
 }
 
-.screen-reader{
+.screen-reader {
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);
-  height: 1px; width: 1px;
-  margin: -1px; padding: 0; border: 0;
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
 }
