@@ -1,0 +1,16 @@
+<label>
+  Select Animal:
+  <select {{on 'change' this.onAnimalSelect}}>
+    <option disabled selected>Select an animal for {{@caretaker.name}}</option>
+    {{#each this.animals as |animal|}}
+      <option value={{animal.id}}>{{animal.species}}</option>
+    {{/each}}
+  </select>
+</label>
+
+{{#if this.animalToAdd}}
+  <button {{on 'click' (fn this.addAnimal @caretaker)}}>Add Animal</button>
+{{else}}
+  <p>Please select an animal.</p>
+{{/if}}
+
