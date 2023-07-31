@@ -32,10 +32,14 @@ export default class AddAnimalToCaretakerComponent extends Component {
 
   @action
   async addAnimal(caretaker, event) {
-    console.log(caretaker.name);
+    //console.log(caretaker.name);
+    //console.log(this.animalToAdd.species);
+    //console.log(caretaker.animals.name);
+    let caretakerAnimals = await caretaker.animals;
     event.preventDefault();
     await caretaker.save();
-    caretaker.animals.pushObject(this.animalToAdd);
+    caretakerAnimals.push(this.animalToAdd);
     await caretaker.save();
+
   }
 }
