@@ -9,7 +9,7 @@
 </label>
 
 {{#if this.animalToAdd}}
-  <button {{on 'click' (fn this.addAnimal @caretaker)}}>Add Animal</button>
+  <button type="button" {{on 'click' (fn this.addAnimal @caretaker)}}>Add Animal</button>
 {{else}}
   <p>Please select an animal.</p>
 {{/if}}

@@ -5,7 +5,8 @@
   <ul>
     {{#each this.model as |animal|}}
       <li>
-        <strong>Species:</strong> {{animal.species}}<br>
+        <strong>Species:</strong> {{animal.species}} 
+        <Animal::Remove @animal={{animal}}/><br>
         <strong>Diet:</strong> {{animal.diet}}<br>
       </li>
     {{/each}}
@@ -14,4 +15,4 @@
   <p>No animals found.</p>
 {{/if}}
 
-<AddAnimal />
+<Animal::Add />

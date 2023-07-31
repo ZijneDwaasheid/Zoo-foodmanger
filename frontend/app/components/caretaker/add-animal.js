@@ -3,7 +3,7 @@ import { inject as service } from '@ember/service';
 import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 
-export default class AddAnimalToCaretakerComponent extends Component {
+export default class AddAnimalComponent extends Component {
   @service store;
   @service router;
 
@@ -12,7 +12,7 @@ export default class AddAnimalToCaretakerComponent extends Component {
 
   constructor() {
     super(...arguments);
-    this.fetchAnimals(); 
+    this.fetchAnimals();
   }
 
   async fetchAnimals() {
@@ -27,7 +27,10 @@ export default class AddAnimalToCaretakerComponent extends Component {
   @action
   async onAnimalSelect(event) {
     this.selectedAnimalId = event.target.value;
-    this.animalToAdd = await this.store.findRecord('animal', this.selectedAnimalId);
+    this.animalToAdd = await this.store.findRecord(
+      'animal',
+      this.selectedAnimalId
+    );
   }
 
   @action
@@ -40,6 +43,5 @@ export default class AddAnimalToCaretakerComponent extends Component {
     await caretaker.save();
     caretakerAnimals.push(this.animalToAdd);
     await caretaker.save();
-
   }
 }
