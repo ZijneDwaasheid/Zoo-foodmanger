@@ -18,7 +18,7 @@ export default class AddAnimalComponent extends Component {
   async fetchAnimals() {
     try {
       this.animals = await this.store.findAll('animal');
-      console.log(this.animals);
+      //console.log(this.animals);
     } catch (error) {
       console.log('Error fetching animals:', error);
     }

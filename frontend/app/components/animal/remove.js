@@ -7,7 +7,6 @@ export default class RemoveComponent extends Component {
 
   @action
   async removeAnimal(animal) {
-   
     try {
       await animal.destroyRecord();
     } catch (error) {
