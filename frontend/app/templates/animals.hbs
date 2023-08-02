@@ -1,19 +1,19 @@
 {{page-title "Animals"}}
-
+<div class="header-container">
+  <h1>All Animals</h1>
+  <Animal::Add />
+</div>
 
 {{#if this.model}}
   <ul>
     {{#each this.model as |animal|}}
-      <li class="rental">
+      <li class="zoo">
         <h3>{{animal.species}}</h3>  
-        <div class="detail type">Diet: {{animal.diet}}</div> 
-        <Animal::Remove @animal={{animal}}/><br>
+        <div class="detail type">{{animal.diet}}</div> 
+        <Animal::Remove @animal={{animal}}/>
       </li>
     {{/each}}
   </ul>
 {{else}}
   <p>No animals found.</p>
 {{/if}}
-
-<br>
-<Animal::Add />

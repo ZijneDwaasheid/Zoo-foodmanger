@@ -1,14 +1,15 @@
-<h1>All Caretakers</h1>
-
+{{page-title "Caretakers"}}
+<div class="header-container">
+  <h1>All Caretakers</h1>
+  <Caretaker::Add />
+</div>
 
 <div>
   {{#each this.model as |caretaker|}}
-    <li class="rental">
-      <LinkTo @route="caretaker-animals" @model={{caretaker}}>
+    <LinkTo @route="caretaker-animals" @model={{caretaker}}>
+      <li class="zoo">
         <h3>{{caretaker.name}}</h3>
-      </LinkTo>
-    </li>
+      </li>
+    </LinkTo>
   {{/each}}
 </div>
-
-<Caretaker::Add />

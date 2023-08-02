@@ -1,8 +1,6 @@
-<form {{on 'submit' this.addCaretaker}}>
-  <label>
-    Name:
-    {{input value=this.name}}
-  </label>
-
-  <button type="submit">Add Caretaker</button>
+<form {{on 'submit' this.addCaretaker}} class="form-container">
+  {{#if this.name}}
+    <button class="submitButton">Add</button>
+  {{/if}}
+  <Input @value={{this.name}} placeholder="Add new caretaker"/>
 </form>

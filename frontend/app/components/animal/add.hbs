@@ -1,13 +1,9 @@
-<form {{on 'submit' this.addAnimal}}>
-  <label>
-    Species:
-    {{input value=this.species}}
-  </label>
-
-  <label>
-    Diet:
-    {{input value=this.diet}}
-  </label>
-
-  <button type="submit">Add Animal</button>
+<form {{on 'submit' this.addAnimal}} class="form-container">
+  {{#if this.species}}
+    {{#if this.diet}}
+    <button class="submitButton">Add</button>
+    {{/if}}
+  {{/if}}
+  <Input @value={{this.species}} placeholder="Add new animal"/>
+  <Input @value={{this.diet}} placeholder="and its diet"/>
 </form>

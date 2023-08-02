@@ -44,11 +44,89 @@ p {
   margin-bottom: 15px;
 }
 
+Input {
+  padding: 11px;
+  font-size: 15px;
+  width: 250px;
+  margin: 20px left 50px;
+  background-color: rgb(255 255 255 / 75%);
+  border: solid 1px lightgray;
+  display: block;
+}
+
+.header-container {
+  display: flex;
+  align-items: center; /* Center vertically within the container */
+  justify-content: space-between; /* Distribute elements with equal space between them */
+}
+
+.header-container h1 {
+  margin-right: 20px; /* Add some space between the heading and the Caretaker::Add component */
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+}
+
 /**
  * Button
  */
 
-.button {
+ .bigRedButton {
+  padding: 10px 30px;
+  text-decoration: none;
+  color: #fff;
+  background: #ba0101;
+  border-radius: 5px;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 0.9;
+  display: inline-block;
+}
+
+.bigRedButton:hover {
+  cursor: crosshair;
+  opacity: 1;
+  background: #ff0000;
+  color: #f6f6f6;
+}
+
+.smallRedButton {
+  padding: 5px 15px;
+  text-decoration: none;
+  color: #ff0000;
+  background: #f6f6f6;
+  border-radius: 5px;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 0.5;
+  display: inline-block;
+}
+
+.smallRedButton:hover {
+  cursor: pointer;
+  opacity: 1;
+  background: #ff0000;
+  color: #f6f6f6;
+}
+
+.submitButton {
+  padding: 10px 30px;
+  text-decoration: none;
+  color: #fff;
+  background: #e7af89c7;
+  border-radius: 5px;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 0.9;
+  display: inline-block;
+}
+
+ .button {
   padding: 10px 30px;
   text-decoration: none;
   color: #fff;
@@ -84,7 +162,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 4em;
+  height: 5em;
   background-image: url(../assets/images/tiger-ge5d8ef1fe_1280.jpg); 
   background-size: cover;
   background-position: center;
@@ -249,7 +327,7 @@ p {
  * Individual Rental Listing
  */
 
-.rental {
+.zoo {
   margin-top: 15px;
   background-color: #f6f6f6;
   padding: 20px 25px;
@@ -259,22 +337,22 @@ p {
   flex-wrap: wrap;
 }
 
-.rental:hover {
-  background-color: #f3f3f3;
+.zoo:hover {
+  background-color: #e7af8970;
 }
 
-.rental img {
+.zoo img {
   border-radius: 5px;
 }
 
-.rental .image {
+.zoo .image {
   flex-grow: 0;
   flex-basis: 150px;
   margin: 20px 25px;
   text-align: center;
 }
 
-.rental button.image {
+.zoo button.image {
   position: relative;
   cursor: pointer;
   border: none;
@@ -282,11 +360,11 @@ p {
   z-index: 1;
 }
 
-.rental button.image:focus {
+.zoo button.image:focus {
   outline: none;
 }
 
-.rental button.image::after {
+.zoo button.image::after {
   content: "";
   position: absolute;
   top: 0;
@@ -302,21 +380,21 @@ p {
   transition: opacity 0.25s ease-in-out;
 }
 
-.rental button.image:focus::after,
-.rental button.image:hover::after {
+.zoo button.image:focus::after,
+.zoo button.image:hover::after {
   opacity: 0.1;
 }
 
-.rental .image img {
+.zoo .image img {
   max-width: 100%;
 }
 
-.rental .image.large {
+.zoo .image.large {
   margin: 30px 25px 50px;
   flex-basis: 100%;
 }
 
-.rental .image small {
+.zoo .image small {
   display: block;
   margin-top: 5px;
   margin-bottom: -15px;
@@ -327,13 +405,13 @@ p {
   position: relative;
 }
 
-.rental .image.large small {
+.zoo .image.large small {
   margin-top: 10px;
   margin-bottom: 0;
   font-size: 110%;
 }
 
-.rental .details {
+.zoo .details {
   flex-basis: 50%;
   flex-grow: 2;
   display: flex;
@@ -344,109 +422,109 @@ p {
   align-content: space-around;
 }
 
-.rental h3 {
+.zoo h3 {
   flex-basis: 100%;
 }
 
-.rental h3 a {
+.zoo h3 a {
   display: inline;
 }
 
-.rental .detail {
+.zoo .detail {
   flex-basis: 50%;
   font-weight: 300;
   font-style: italic;
   white-space: nowrap;
 }
 
-.rental .detail span {
+.zoo .detail span {
   font-weight: 400;
   font-style: normal;
 }
 
-.rental .map {
+.zoo .map {
   flex-grow: 0;
   flex-basis: 150px;
   font-size: 0;
   margin: 0 25px;
 }
 
-.rental .map img {
+.zoo .map img {
   width: 150px;
   height: 150px;
 }
 
-.rental.detailed {
+.zoo.detailed {
   background: none;
   align-items: flex-start;
 }
 
-.rental.detailed .image {
+.zoo.detailed .image {
   flex-basis: 320px;
 }
 
-.rental.detailed .image.large {
+.zoo.detailed .image.large {
   margin: 30px 25px 50px;
   flex-basis: 100%;
 }
 
-.rental.detailed .details {
+.zoo.detailed .details {
   height: auto;
 }
 
-.rental.detailed h3 {
+.zoo.detailed h3 {
   font-size: 200%;
   margin-bottom: 10px;
 }
 
-.rental.detailed .detail {
+.zoo.detailed .detail {
   margin: 5px 0;
   flex-basis: 100%;
   flex-shrink: 2;
 }
 
-.rental.detailed .description {
+.zoo.detailed .description {
   white-space: normal;
   flex-basis: 100%;
   flex-shrink: 1;
 }
 
-.rental.detailed .map {
+.zoo.detailed .map {
   flex-basis: 100%;
   margin: 50px 25px 25px;
 }
 
-.rental.detailed .map img {
+.zoo.detailed .map img {
   width: 100%;
   height: auto;
 }
 
 @media only screen and (width <= 919px) {
-  .rental.detailed .image,
-  .rental.detailed .image.large {
+  .zoo.detailed .image,
+  .zoo.detailed .image.large {
     margin: 30px 25px 25px;
     flex-basis: 100%;
     cursor: default;
   }
 
-  .rental.detailed .image:hover {
+  .zoo.detailed .image:hover {
     flex-basis: 100%;
     cursor: default;
   }
 
-  .rental.detailed .image small {
+  .zoo.detailed .image small {
     display: none;
   }
 
-  .rental.detailed button.image:hover::after {
+  .zoo.detailed button.image:hover::after {
     opacity: 0;
   }
 
-  .rental.detailed button.image:focus::after {
+  .zoo.detailed button.image:focus::after {
     opacity: 0.1;
   }
 
-  .rental.detailed .map {
+  .zoo.detailed .map {
     margin-top: 25px;
   }
 }
