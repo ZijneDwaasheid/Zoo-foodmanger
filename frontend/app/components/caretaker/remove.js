@@ -8,7 +8,7 @@ export default class RemoveComponent extends Component {
 
   @action
   async removeCaretaker(caretaker) {
-   if (window.confirm('Are you sure you want to delete ' + caretaker.name)){
+   if (window.confirm('Are you sure you want to fire ' + caretaker.name)){
     try {
       await caretaker.destroyRecord();
     } catch (error) {

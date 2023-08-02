@@ -1,15 +1,18 @@
-{{page-title @model.name}}
-<h1>Animals for {{this.model.name}}</h1>
+{{page-title "caretaker " @model.name}}
+<div class="header-container">
+  <h1>Animals for {{this.model.name}}</h1>
+  <Caretaker::AddAnimal @caretaker={{this.model}}/>
+</div>
 
 <ul>
   {{#each this.model.animals as |animal|}}
     <li class="zoo">
       <h3>{{animal.species}}</h3>
       <div class="detail type">{{animal.diet}}</div>
-      <Caretaker::RemoveAnimal @caretaker={{this.model}} @animal={{animal}}/></li>
+      <Caretaker::RemoveAnimal @caretaker={{this.model}} @animal={{animal}}/>
+    </li>
   {{/each}}
 </ul>
 
-<Caretaker::AddAnimal @caretaker={{this.model}}/>
-<br />
+
 <Caretaker::Remove @caretaker={{this.model}}/>
