@@ -31,7 +31,7 @@ body {
 }
 
 a {
-  color: #016aba;
+  color: #000000;
   text-decoration: none;
 }
 
@@ -53,6 +53,7 @@ Input {
   border: solid 1px lightgray;
   display: block;
 }
+
 
 .header-container {
   display: flex;
@@ -166,14 +167,16 @@ Input {
   background-image: url(../assets/images/tiger-ge5d8ef1fe_1280.jpg); 
   background-size: cover;
   background-position: center;
+  -webkit-text-stroke: 1.5px rgb(233, 136, 9); 
   color: #ffffff;
 }
 
 .menu h1 {
-  font-size: 1.8em;
+  font-size: 2.5em;
   font-style: italic;
   margin: 0;
   padding: 5px 0 0 8px;
+  align-self: center;
 }
 
 .links {
@@ -201,9 +204,10 @@ Input {
 
 .menu a {
   text-decoration: none;
+  -webkit-text-stroke: 1px rgb(233, 136, 9); 
   padding: 0 15px;
-  color: #fff;
-  font-size: 20px;
+  color: #ffffff;
+  font-size: 25px;
   font-weight: bold;
 }
 
