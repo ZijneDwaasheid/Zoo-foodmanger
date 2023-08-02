@@ -1,10 +1,11 @@
 <h1>All Caretakers</h1>
 
+
 <div>
   {{#each this.model as |caretaker|}}
-    <li>
+    <li class="rental">
       <LinkTo @route="caretaker-animals" @model={{caretaker}}>
-        {{caretaker.name}}
+        <h3>{{caretaker.name}}</h3>
       </LinkTo>
     </li>
   {{/each}}

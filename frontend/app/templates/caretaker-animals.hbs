@@ -2,8 +2,10 @@
 
 <ul>
   {{#each this.model.animals as |animal|}}
-    <li>{{animal.species}} - {{animal.diet}}</li>
-    <Caretaker::RemoveAnimal @caretaker={{this.model}} @animal={{animal}}/>
+    <li class="rental">
+      <h3>{{animal.species}}</h3>
+      <div class="detail type">{{animal.diet}}</div>
+      <Caretaker::RemoveAnimal @caretaker={{this.model}} @animal={{animal}}/></li>
   {{/each}}
 </ul>
 
