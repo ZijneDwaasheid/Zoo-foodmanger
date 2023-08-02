@@ -85,11 +85,13 @@ p {
   justify-content: space-between;
   align-items: center;
   height: 4em;
-  background-color: #e46855;
+  background-image: url(../assets/images/tiger-ge5d8ef1fe_1280.jpg); 
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
 }
 
 .menu h1 {
-  color: #f9f9f9;
   font-size: 1.8em;
   font-style: italic;
   margin: 0;
