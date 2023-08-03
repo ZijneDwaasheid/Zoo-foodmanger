@@ -13,7 +13,7 @@ Setting up your environment is done in three easy steps:
 Boot your microservices-enabled system using docker-compose.
 
     cd /path/to/zoo-project
-    docker-compose up
+    docker-compose up -d --build
 
-You can shut down using `docker-compose stop` and remove everything using `docker-compose rm`.
+You can shut down using `docker-compose down`.
 
