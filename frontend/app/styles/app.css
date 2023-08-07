@@ -31,7 +31,7 @@ body {
 }
 
 a {
-  color: #000000;
+  color: #000;
   text-decoration: none;
 }
 
@@ -44,7 +44,7 @@ p {
   margin-bottom: 15px;
 }
 
-Input {
+input {
   padding: 11px;
   font-size: 15px;
   width: 250px;
@@ -53,7 +53,6 @@ Input {
   border: solid 1px lightgray;
   display: block;
 }
-
 
 .header-container {
   display: flex;
@@ -74,7 +73,7 @@ Input {
  * Button
  */
 
- .bigRedButton {
+.bigRedButton {
   padding: 10px 30px;
   text-decoration: none;
   color: #fff;
@@ -90,14 +89,14 @@ Input {
 .bigRedButton:hover {
   cursor: crosshair;
   opacity: 1;
-  background: #ff0000;
+  background: #f00;
   color: #f6f6f6;
 }
 
 .smallRedButton {
   padding: 5px 15px;
   text-decoration: none;
-  color: #ff0000;
+  color: #f00;
   background: #f6f6f6;
   border-radius: 5px;
   border: none;
@@ -110,7 +109,7 @@ Input {
 .smallRedButton:hover {
   cursor: pointer;
   opacity: 1;
-  background: #ff0000;
+  background: #f00;
   color: #f6f6f6;
 }
 
@@ -141,21 +140,28 @@ option[disabled] {
   display: inline-block;
 }
 
- .button {
-  padding: 10px 30px;
+.submitButton:hover {
+  background: #ec9154;
+}
+
+.button {
+  padding: 5px 15px;
   text-decoration: none;
-  color: #fff;
-  background: #016aba;
+  color: rgb(30 58 185);
+  background: #f6f6f6;
   border-radius: 5px;
   border: none;
   font-size: 20px;
   font-weight: bold;
-  opacity: 0.9;
+  opacity: 0.5;
   display: inline-block;
 }
 
 .button:hover {
+  cursor: pointer;
   opacity: 1;
+  background: rgb(30 58 185);
+  color: #f6f6f6;
 }
 
 /**
@@ -178,11 +184,11 @@ option[disabled] {
   justify-content: space-between;
   align-items: center;
   height: 5em;
-  background-image: url(../assets/images/tiger-ge5d8ef1fe_1280.jpg); 
+  background-image: url("../assets/images/tiger-ge5d8ef1fe_1280.jpg");
   background-size: cover;
   background-position: center;
-  -webkit-text-stroke: 1.5px rgb(233, 136, 9); 
-  color: #ffffff;
+  -webkit-text-stroke: 1.5px rgb(233 136 9);
+  color: #fff;
 }
 
 .menu h1 {
@@ -218,9 +224,9 @@ option[disabled] {
 
 .menu a {
   text-decoration: none;
-  -webkit-text-stroke: 1px rgb(233, 136, 9); 
+  -webkit-text-stroke: 1px rgb(233 136 9);
   padding: 0 15px;
-  color: #ffffff;
+  color: #fff;
   font-size: 25px;
   font-weight: bold;
 }

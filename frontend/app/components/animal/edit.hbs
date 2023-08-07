@@ -1,0 +1,12 @@
+<button class="button" type="button" {{on "click" this.clickedOnEdit}}>
+  Edit
+</button>
+
+{{#if this.clicked}}
+<form {{on "submit" (fn this.editAnimal @animal) }} class="form-container">
+  {{#if this.diet}}
+  <button class="submitButton" type="submit">Change</button>
+  {{/if}}
+  <Input @value={{this.diet}} placeholder="Change the diet"/>
+</form>
+{{/if}}

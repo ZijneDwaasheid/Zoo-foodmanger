@@ -7,7 +7,7 @@
 
 
 {{#if this.animalToAdd}}
-  <button class="submitButton" {{on 'click' (fn this.addAnimal @caretaker)}}>Add Animal</button>
+  <button class="submitButton" type="button" {{on 'click' (fn this.addAnimal @caretaker)}}>Add Animal</button>
 {{else}}
   
 {{/if}}

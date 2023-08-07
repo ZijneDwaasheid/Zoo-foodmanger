@@ -7,10 +7,10 @@ export default class RemoveAnimalComponent extends Component {
 
   @action
   async deleteAnimal(caretaker, animal) {
-    let caretakerAnimals = [ ... await caretaker.animals];
+    let caretakerAnimals = [...(await caretaker.animals)];
     let animalToDelete = await animal;
 
-    caretaker.animals = caretakerAnimals.filter((animal)=>{
+    caretaker.animals = caretakerAnimals.filter((animal) => {
       return animal.id !== animalToDelete.id;
     });
 

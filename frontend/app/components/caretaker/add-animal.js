@@ -31,6 +31,8 @@ export default class AddAnimalComponent extends Component {
       'animal',
       this.selectedAnimalId
     );
+
+    event.target.selectedIndex = 0;
   }
 
   @action
@@ -43,5 +45,7 @@ export default class AddAnimalComponent extends Component {
     await caretaker.save();
     caretakerAnimals.push(this.animalToAdd);
     await caretaker.save();
+
+    this.animalToAdd = false;
   }
 }
